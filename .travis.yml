@@ -27,10 +27,9 @@ install:
   # create environment and install dependencies
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy>=1.15.0 scipy nose pip matplotlib coverage
   - source activate test-environment
-  - conda install -c conda-forge healpy aipy
   - pip install coveralls
 
-script: nosetests -v tests/test_demo_code.py
+script: nosetests testing_demo --with-coverage --cover-package=testing_demo --verbose
 
 after_success:
   - coveralls

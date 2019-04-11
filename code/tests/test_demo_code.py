@@ -1,12 +1,12 @@
 import unittest
 import nose.tools as nt
-import numpy as np, demo_code as dc
+import numpy as np, testing_demo as td
 
 
 class Test_demo_code(unittest.TestCase):
 
     def setUp(self):
-        example_arr = np.array(((3.2, 0.0), (0.0, 8.9)))
+        self.example_arr = np.array(((3.2, 0.0), (0.0, 8.9)))
         pass
 
     def tearDown(self):
@@ -17,8 +17,15 @@ class Test_demo_code(unittest.TestCase):
 
     def test_rand_arr(self):
         # Test size of array
-        test_arr = dc.rand_arr(4)
+        test_arr = td.demo_code.rand_arr(4)
         nt.assert_equal(test_arr.shape, (4, 4))
+
+    def test_hardcoded_arr(self):
+        test_arr = td.demo_code.hardcoded_arr()
+        self.assertAlmostEqual(test_arr[0,0], self.example_arr[0,0], places=3)
+
+    def test_error_msg(self):
+        self.assertRaises(TypeError, td.demo_code.error_msg, 4.0)
         
 
 
