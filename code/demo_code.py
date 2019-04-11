@@ -1,4 +1,6 @@
-    import numpy as np
+import numpy as np
 
-    gulu = np.zeros((5,5))
+def rand_arr(size):
+    return np.random.normal(size=(size,size))
+
 
