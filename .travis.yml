@@ -30,7 +30,11 @@ install:
   - pip install coveralls
   - python setup.py install
 
-script: nosetests testing_demo --with-coverage --verbose
+script: 
+  - pwd
+  - python -c "import testing_demo"
+  - echo $?
+  - nosetests code --with-coverage --verbose
 
 after_success:
   - coveralls
