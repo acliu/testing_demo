@@ -5,9 +5,9 @@ setup_args = {
     'name':         'testing_demo',
     'author':       'Adrian Liu',
     'url':          'https://github.com/acliu/testing_demo',
-    'description':  'HERA Power Spectrum Estimator Code.',
+    'description':  'Testing demonstration',
     'packages':     ['testing_demo'],
-    'package_dir':  {'testing_demo': 'code'},
+    'package_dir':  {'testing_demo': 'testing_demo'},
     'install_requires': ['numpy>=1.15'],
 }
 
