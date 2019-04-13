@@ -9,6 +9,7 @@ setup_args = {
     'packages':     ['testing_demo'],
     'package_dir':  {'testing_demo': 'code'},
     'install_requires': ['numpy>=1.15'],
+    'zip_safe':     False,
 }
 
 if __name__ == '__main__':
